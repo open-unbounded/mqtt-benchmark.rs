@@ -1,0 +1,19 @@
+[package]
+name = "mqtt-benchmark"
+version = "0.1.0"
+edition = "2021"
+authors = ["chenquan"]
+description = "A simple MQTT (broker) benchmarking tool."
+license = "Apache-2.0"
+repository = "https://github.com/chenquan/mqtt-benchmark"
+homepage = "https://github.com/chenquan/mqtt-benchmark"
+keywords = ["mqtt", "benchmark"]
+categories = ["command-line-utilities"]
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+paho-mqtt = "0.12"
+time = "0.3.31"
+tokio = { version = "1", features = ["full"] }
+awaitgroup = "0.7.0"
+clap = { version = "4", features = ["derive"] } # 命令行解析
