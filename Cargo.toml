@@ -1,8 +1,8 @@
 [package]
 name = "mqtt-benchmark"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2021"
-authors = ["chenquan"]
+authors = ["chenquan <chenquan.dev@gmail.com>"]
 description = "A simple MQTT (broker) benchmarking tool."
 license = "Apache-2.0"
 repository = "https://github.com/chenquan/mqtt-benchmark"
