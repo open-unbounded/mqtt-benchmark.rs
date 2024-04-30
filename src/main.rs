@@ -93,7 +93,6 @@ impl Mqtt {
         let (client, mut event_loop) = AsyncClient::new(self.c.clone().into(), 10);
 
         let start = time::Instant::now();
-        let mut i = 0usize;
         tokio::spawn(async move {
             loop {
                 let event = event_loop.poll().await;
@@ -104,7 +103,12 @@ impl Mqtt {
             }
         });
 
+        let mut i = 0usize;
         loop {
+            if i >= self.c.size {
+                break;
+            }
+
             let mut payload: Vec<u8> = Vec::new();
             if let Some(data) = &self.c.payload {
                 payload.extend(data.as_bytes());
@@ -113,9 +117,6 @@ impl Mqtt {
             let result = client.publish(&self.c.topic, to_qos(self.c.qos), false, payload);
             if let Err(err) = result.await {
                 println!("client: {}, publish failed:{}", client_num, err);
-                break;
-            }
-            if i >= self.c.size {
                 break;
             }
 
