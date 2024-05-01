@@ -1,6 +1,6 @@
 [package]
 name = "mqtt-benchmark"
-version = "0.2.1"
+version = "0.2.2"
 edition = "2021"
 authors = ["chenquan <chenquan.dev@gmail.com>"]
 description = "A simple MQTT (broker) benchmarking tool."

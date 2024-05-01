@@ -6,7 +6,7 @@ use rumqttc::{AsyncClient, MqttOptions, QoS};
 use tokio::sync::Mutex;
 use url::Url;
 
-#[tokio::main(flavor = "current_thread")]
+#[tokio::main(flavor = "multi_thread", worker_threads = 1000)]
 async fn main() {
     let c: Config = Config::parse();
     println!("{:?}", c);
