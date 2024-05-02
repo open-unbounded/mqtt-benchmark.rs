@@ -12,7 +12,7 @@ categories = ["command-line-utilities"]
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-time = "0.3.31"
+time = "0.3.36"
 tokio = { version = "1", features = ["full"] }
 awaitgroup = "0.7.0"
 clap = { version = "4", features = ["derive"] } # 命令行解析
