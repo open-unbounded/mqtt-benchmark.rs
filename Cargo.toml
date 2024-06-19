@@ -17,4 +17,4 @@ tokio = { version = "1", features = ["full"] }
 awaitgroup = "0.7.0"
 clap = { version = "4", features = ["derive"] } # 命令行解析
 rumqttc = "0.24.0"
-url = "2.5.1"
+url = "2.5.2"
